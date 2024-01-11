@@ -1,7 +1,6 @@
 <template>
   <h1>{{ msg }}</h1>
-  <h1>test</h1>
-  <my-deni-comp name="ici_name_obli"/>
+  <my-first-comp name="ici_name_obli" name2=""/>
 
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
@@ -34,14 +33,15 @@
 </style>
 
 <script setup lang="ts">
-import { reactive, ref } from 'vue'
-import MyDeniComp from './myDeniComp.vue';
+import {ref } from 'vue'
+import myFirstComp from './myFirstComp.vue';
 
-defineProps<{ msg: string }>()
+const props = defineProps<{ msg: string }>()
 
 const count = ref(0)
 
 function log() {
-  console.log(msg.value)
+  console.log(count.value)
+  console.log(props.msg)
 }
 </script>

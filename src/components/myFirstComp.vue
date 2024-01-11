@@ -1,6 +1,9 @@
 <template>
-    <h2>ici{{ name }}</h2>
-    <h2>iciddd-{{ name2 }}</h2>
+    <div style="border: 1px solid #ccc!important;">
+        <h1>myFirstComp</h1>
+        <h2>props_name : {{ name }}</h2>
+        <h2>props_name2 : {{ name2 }}</h2>
+    </div>
 </template>
 <script setup lang="ts">
     //defineProps({name:String})
