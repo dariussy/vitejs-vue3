@@ -1,18 +1,16 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Home from "@/views/Home.vue";
-import About from "@/views/About.vue";
 import NotFound from "@/views/NotFound.vue";
 
 const routes = [
     {
         path: "/",
         name: "Home",
-        component: Home,
+        component: () => import('@/views/Home.vue'),
     },
     {
         path: "/about",
         name: "About",
-        component: About,
+        component: () => import('@/views/About.vue'),
         meta: { layout: 'empty' },
     },
     {
