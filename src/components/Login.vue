@@ -12,7 +12,7 @@ const errorLogin = ref('')
 function login() {
   errorLogin.value = '';
   authStore.getTokenFromApiRest(email.value, password.value)
-      .then((resp) => {
+      .then(() => {
 
         console.log("login")
         router.push('/')
